@@ -1,5 +1,6 @@
 
-/*Contains CSS that affects the logo, tan div and buttons found on all pages     #EAE2B7; */
+/*Contains CSS that affects the logo, tan div and buttons found on all pages*/
+
 body{
     background: linear-gradient(135deg, rgb(0 48 73) 0%, rgb(102 155 188) 100%);
     height: 100vh;
@@ -40,7 +41,8 @@ button {
     padding: 13px 40px;
     border-radius: 8px;
     margin: 20px;
-    margin-top: 300px;
+    margin-top: 200px;
+    font-family: "Roboto", sans-serif;
 }
 
 .button-container {
@@ -49,7 +51,28 @@ button {
 }
 
 /*CSS affecting 1index*/
+
 .headingsection h1 {
     display: flex;
+    font-family: "Roboto", sans-serif;
 
+}
+
+
+
+
+.image-container img {
+    width: 250px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+
+
+
+input {
+    padding: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+    width: 230px;
 }
