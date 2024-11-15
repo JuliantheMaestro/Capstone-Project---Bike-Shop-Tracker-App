@@ -1,12 +1,37 @@
+
+/*Contains CSS that affects the logo, tan div and buttons found on all pages     #EAE2B7; */
 body{
     background: linear-gradient(135deg, rgb(0 48 73) 0%, rgb(102 155 188) 100%);
     height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    overflow: hidden;
 }
 
 #index-el {
-    margin: 102px -16px;
-    background-color: #EAE2B7;
+    width: 100vw;
+    margin-top: 50px;
+    background-color:#EAE2B7 ;
     height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.logo-container {
+    text-align: center;
+    position: fixed;
+    margin-bottom: 660px;
+}
+
+.logo-container img {
+    width: 200px; 
+ 
 }
 
 button {
@@ -14,6 +39,17 @@ button {
     border: none;
     padding: 13px 40px;
     border-radius: 8px;
-    margin-top: 400px;
-    margin-left: 400px;
+    margin: 20px;
+    margin-top: 300px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center ;
+}
+
+/*CSS affecting 1index*/
+.headingsection h1 {
+    display: flex;
+
 }
