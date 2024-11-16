@@ -14,11 +14,19 @@
 
     <div id="index-el">
 
-        <input type="text" placeholder="Input Name">
-        <input type="text" placeholder="Input Phone Number">
-        <input type="text" placeholder="Input Email Address">
-        <input type="text" placeholder="Mechanic Experience">
-        <input type="text" placeholder="Additional Comments">
+        <input name="name" type="text" placeholder="Input Name">
+        <input name="phone number" type="text" placeholder="Input Phone Number">
+        <input name="email address" type="text" placeholder="Input Email Address">
+
+        <fieldset>
+            <p>How much mechanical experience do you have?</p>
+            <input name="Mechanical experience" value="option1" type="radio"><label for="option1">None</label><br>
+            <input name="Mechanical experience" value="option2" type="radio"><label for="option2">Novice</label><br>
+            <input name="Mechanical experience" value="option3" type="radio"><label for="option3">Intermediate</label><br> 
+            <input name="Mechanical experience" value="option4" type="radio"><label for="option4">Advanced</label>
+        </fieldset>
+
+        <input name="comments" type="text" placeholder="Additional Comments">
 
         <div class="button-container">
 
