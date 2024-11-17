@@ -15,18 +15,30 @@
     <div id="index-el">
         
         <div class="form">
-            <form action="" method="post">
+            <form action="/post" method="post">
+
+
                 <label for="input-name">Input Name :</label>
-                <input type="text" id="input-name" name="input-name" placeholder="Input Name">
+                <input type="text" id="input-name" name="name" placeholder="Input Name"><br>
 
                 <label for="input-phonenumber">Input Phone Number :</label>
-                <input type="text" id="input-phonenumber" name="input-phonenumber" placeholder="Input Phone Number">
+                <input type="text" id="input-phonenumber" name="phonenumber" placeholder="Input Phone Number"><br>
 
-                <input name="email address" type="text" placeholder="Input Email Address">
+                <label for="input-email">Input Email :</label>
+                <input type="text" id="input-email" name="email"  placeholder="Input Email Address"><br>
 
-                <input name="comments" type="text" placeholder="Additional Comments">
+                <label for="mechanic-experience">Mechanical Experience</label>
+                <select name="mechanic_experience" id="mechanic-experience">
+                    <option value="none">None</option>
+                    <option value="novice">Novice</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select><br>
 
+                <label for="comments">Additional Comments :</label>
+                <textarea id="comments" name="comments" placeholder="Bikes are the best"></textarea><br>
 
+                <button type="submit">Submit</button>
 
             </form>
         </div>
