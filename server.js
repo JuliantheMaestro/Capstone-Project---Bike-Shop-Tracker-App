@@ -17,22 +17,24 @@ const userSchema = new mongoose.Schema({
     name:String,
     phonenumber:String,
     email:String,
-    mechanic_experience:String
+    mechanic_experience:String,
+    comments:String
 })
 
 const Users = mongoose.model("data", userSchema)
 
 app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname, "4volunteerSignUpPage.html"))
+    res.sendFile(path.join(__dirname, "1index.html"))
 })
 
 app.post("/post",async (req,res)=>{
-    const {name, phonenumber, email, mechanic_experience} = req.body
+    const {name, phonenumber, email, mechanic_experience, comments} = req.body
     const user = new Users ({
         name,
         phonenumber,
         email,
-        mechanic_experience
+        mechanic_experience,
+        comments
     })
     await user.save()
     console.log(user)

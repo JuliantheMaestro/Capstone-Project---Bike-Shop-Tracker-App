@@ -14,16 +14,12 @@ body{
 .logo-container {
     text-align: center;
     position: fixed;
-    margin-bottom: 670px;
+    margin-bottom: 675px;
 }
 
 .logo-container img {
     width: 200px; 
- 
 }
-
-
-
 
 
 #index-el {
@@ -32,15 +28,7 @@ body{
     margin-bottom: 30px;
     background-color:#EAE2B7 ;
     height: 620px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
 }
-
-
 
 button {
     background-color: #FCBF49;
@@ -48,40 +36,95 @@ button {
     padding: 13px 40px;
     border-radius: 8px;
     margin: 20px;
-    margin-top: 100px;
     font-family: "Roboto", sans-serif;
 }
-
-.button-container {
-    display: flex;
-    justify-content: center ;
-}
-
-/*CSS affecting 1index*/
-
-.headingsection h1 {
-    display: flex;
-    font-family: "Roboto", sans-serif;
-
-}
-
-
-
-
-.image-container img {
-    width: 250px;
-    height: 200px;
-    margin-left: 10px;
-}
-
-
-
 
 input {
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
     height: 30px;
-    width: 230px;
+    width: 250px;
+}
+
+/*CSS affecting 1index*/
+
+
+.button-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center ;
+}
+
+.headingsection h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
 
 }
+
+.image-container1 img {
+   width: 250px;
+   padding: 5px;
+}
+
+
+.image-container1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*CSS affecting 2newUserPage*/
+
+
+.image-container2 img {
+    width: 700px;
+    padding: 5px;
+ }
+ 
+ 
+.image-container2 {
+     display: flex;
+     justify-content: center;
+     margin-top: 30px;
+ }
+
+
+/*CSS affecting 3userLoginPage*/
+
+
+
+
+
+
+/*CSS affecting 4volunteerSignUpPage*/
+
+.form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+
+
+/*CSS affecting 5WelcomeSignUpPage*/
+
+
+
+
+
+
+/*CSS affecting 6WelcomePage*/
+
+
+
+
+
+
+
+/*CSS affecting 7WelcomeBackUserPage*/
+
