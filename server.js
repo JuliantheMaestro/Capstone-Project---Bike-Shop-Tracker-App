@@ -38,7 +38,7 @@ app.post("/post",async (req,res)=>{
     })
     await user.save()
     console.log(user)
-    res.send('<script>alert("Form Submitted Succesfully");</script>')
+    res.send('<script>alert("Form Submitted Successfully");</script>')
 })
 
 app.listen(port,()=>{

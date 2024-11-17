@@ -35,30 +35,58 @@ button {
     border: none;
     padding: 13px 40px;
     border-radius: 8px;
-    margin: 20px;
+    font-family: "Roboto", sans-serif;
+    margin-right: 20px;
+}
+
+/*CSS for input form on page 4*/
+
+form label {
+    font-size: 25px;
     font-family: "Roboto", sans-serif;
 }
 
-input {
-    padding: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    height: 30px;
+form input {
+    height: 10px;
     width: 250px;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+}
+form select {
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+textarea {
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Roboto", sans-serif;
 }
 
 /*CSS affecting 1index*/
 
 
 .button-container {
-    margin-top: 80px;
+    margin-top: 20px;
     display: flex;
     justify-content: center ;
 }
 
-.headingsection h1 {
+.headingsection {
+    margin-top: 80px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     font-family: "Roboto", sans-serif;
 
 }
@@ -87,14 +115,30 @@ input {
 .image-container2 {
      display: flex;
      justify-content: center;
-     margin-top: 30px;
+     margin-top: 50px;
  }
 
 
 /*CSS affecting 3userLoginPage*/
 
 
+.form2 {
+    margin-top: 80px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
+.form2 input {
+    height: 10px;
+    width: 250px;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+}
 
 
 
