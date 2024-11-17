@@ -9,28 +9,29 @@
 <body>
 
     <div class="logo-container">
-        <img src="BikeLogoRound.jpg">
+        <img src="imgs/BikeLogoRound.jpg">
     </div>
 
     <div id="index-el">
+        
+        <div class="form">
+            <form action="" method="post">
+                <label for="input-name">Input Name :</label>
+                <input type="text" id="input-name" name="input-name" placeholder="Input Name">
 
-        <input name="name" type="text" placeholder="Input Name">
-        <input name="phone number" type="text" placeholder="Input Phone Number">
-        <input name="email address" type="text" placeholder="Input Email Address">
+                <label for="input-phonenumber">Input Phone Number :</label>
+                <input type="text" id="input-phonenumber" name="input-phonenumber" placeholder="Input Phone Number">
 
-        <fieldset>
-            <p>How much mechanical experience do you have?</p>
-            <input name="Mechanical experience" value="option1" type="radio"><label for="option1">None</label><br>
-            <input name="Mechanical experience" value="option2" type="radio"><label for="option2">Novice</label><br>
-            <input name="Mechanical experience" value="option3" type="radio"><label for="option3">Intermediate</label><br> 
-            <input name="Mechanical experience" value="option4" type="radio"><label for="option4">Advanced</label>
-        </fieldset>
+                <input name="email address" type="text" placeholder="Input Email Address">
 
-        <input name="comments" type="text" placeholder="Additional Comments">
+                <input name="comments" type="text" placeholder="Additional Comments">
+
+
+
+            </form>
+        </div>
 
         <div class="button-container">
-
-            
 
             <button onclick = "window.location.href = '5WelcomeSignupPage.html'">I’m Ready to Volunteer!</button>
 
