@@ -22,12 +22,13 @@ body{
 }
 
 
-#index-el {
+.index-el {
     width: 100vw;
     margin-top: 50px;
     margin-bottom: 30px;
     background-color:#EAE2B7 ;
     height: 620px;
+    box-shadow: 0px 9px 20px 5px #d2caa2;
 }
 
 button {
@@ -43,12 +44,12 @@ button {
 
 form label {
     font-size: 25px;
-    font-family: "Roboto", sans-serif;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 form input {
     height: 10px;
-    width: 250px;
+    width: 300px;
     padding: 8px;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -59,17 +60,19 @@ form select {
     padding: 8px;
     margin-bottom: 10px;
     margin-top: 10px;
+    border: none;
+    width: 315px;
 }
 
 textarea {
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 250px;
+    width: 290px;
     height: 40px;
     border-radius: 8px;
     border: none;
-    font-family: "Roboto", sans-serif;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 /*CSS affecting 1index*/
@@ -82,17 +85,22 @@ textarea {
 }
 
 .headingsection {
-    margin-top: 80px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    font-family: "Roboto", sans-serif;
+    font-family: "Arial, Helvetica, sans-serif";
+    font-weight: bold;
+}
 
+#headingsection1 {
+    font-size: 25px;
+    text-shadow: 1px 0px 11px #908a6d
 }
 
 .image-container1 img {
-   width: 250px;
+   width: 350px;
    padding: 5px;
 }
 
@@ -100,6 +108,7 @@ textarea {
 .image-container1 {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 
@@ -107,7 +116,7 @@ textarea {
 
 
 .image-container2 img {
-    width: 700px;
+    width: 850px;
     padding: 5px;
  }
  
@@ -122,7 +131,7 @@ textarea {
 /*CSS affecting 3userLoginPage*/
 
 
-.form2 {
+.form3 {
     margin-top: 80px;
     display: flex;
     align-content: center;
@@ -130,14 +139,16 @@ textarea {
     flex-direction: column;
 }
 
-.form2 input {
+.form3 input {
     height: 10px;
-    width: 250px;
-    padding: 8px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     border-radius: 8px;
     border: none;
+    text-align: center;
+    box-shadow: 0px 5px 0px 5px #b0aa8b;
 }
 
 
@@ -157,14 +168,24 @@ textarea {
 
 /*CSS affecting 5WelcomeSignUpPage*/
 
-
-
+#headingsection5 {
+    font-size: 15px;
+    text-align: center;
+    padding: 50px;
+    line-height: 40px;
+    text-shadow: 0px 2px 11px #908a6d;
+}
 
 
 
 /*CSS affecting 6WelcomePage*/
 
-
+#headingsection6 {
+    font-size: 30px;
+    text-align: center;
+    padding: 80px;
+    line-height: 70px;
+}
 
 
 
