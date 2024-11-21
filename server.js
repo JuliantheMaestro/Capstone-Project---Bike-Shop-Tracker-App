@@ -6,6 +6,7 @@ const port = 3019
 const app = express()
 app.use(express.static(__dirname))
 app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 
 mongoose.connect("mongodb://127.0.0.1:27017/volunteers")
 const db = mongoose.connection 
@@ -14,6 +15,7 @@ db.once("open",()=>{
 })
 
 const userSchema = new mongoose.Schema({
+    numid:Number,
     name:String,
     phonenumber:String,
     email:String,
@@ -28,8 +30,9 @@ app.get("/",(req,res)=>{
 })
 
 app.post("/post",async (req,res)=>{
-    const {name, phonenumber, email, mechanic_experience, comments} = req.body
+    const {numid, name, phonenumber, email, mechanic_experience, comments} = req.body
     const user = new Users ({
+        numid,
         name,
         phonenumber,
         email,
@@ -38,7 +41,7 @@ app.post("/post",async (req,res)=>{
     })
     await user.save()
     console.log(user)
-    res.send('<script>alert("Form Submitted Successfully");</script>')
+    res.send('<script>alert("Form Submitted Successfully"); window.location.href="/";</script>')
 })
 
 app.listen(port,()=>{

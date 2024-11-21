@@ -51,17 +51,22 @@ form input {
     height: 10px;
     width: 300px;
     padding: 8px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
     border-radius: 8px;
     border: none;
 }
 form select {
     padding: 8px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 2px;
     border: none;
     width: 315px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 textarea {
@@ -132,7 +137,7 @@ textarea {
 
 
 .form3 {
-    margin-top: 80px;
+    margin-top: 180px;
     display: flex;
     align-content: center;
     flex-wrap: wrap;
