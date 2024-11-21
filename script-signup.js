@@ -13,7 +13,7 @@ document.getElementById('userForm').addEventListener('submit', async function(ev
         name: document.getElementById('input-name').value,
         email: document.getElementById('input-email').value,
         phonenumber: document.getElementById('input-phonenumber').value,
-        experience: document.getElementById('mechanic-experience').value,
+        mechanic_experience: document.getElementById('mechanic-experience').value,
         comments: document.getElementById('comments').value
     }
     
