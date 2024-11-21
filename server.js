@@ -8,11 +8,16 @@ app.use(express.static(__dirname))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
+
+//Connection to MongoDB
+
 mongoose.connect("mongodb://127.0.0.1:27017/volunteers")
 const db = mongoose.connection 
 db.once("open",()=>{
     console.log("Mongodb connection successful")
 })
+
+//Schema
 
 const userSchema = new mongoose.Schema({
     numid:Number,
@@ -20,14 +25,21 @@ const userSchema = new mongoose.Schema({
     phonenumber:String,
     email:String,
     mechanic_experience:String,
-    comments:String
+    comments:String,
+    time: { type: Date, default: Date.now }
 })
 
 const Users = mongoose.model("data", userSchema)
 
+
+//Directs user to first page when server starts
+
 app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname, "1index.html"))
 })
+
+
+//Data collection from volunteer sign-up form, sends an alert if it succeeds and refreshes the form 
 
 app.post("/post",async (req,res)=>{
     const {numid, name, phonenumber, email, mechanic_experience, comments} = req.body
@@ -43,6 +55,13 @@ app.post("/post",async (req,res)=>{
     console.log(user)
     res.send('<script>alert("Form Submitted Successfully"); window.location.href="/";</script>')
 })
+
+
+
+
+
+
+//Notifies if server has started in terminal 
 
 app.listen(port,()=>{
     console.log("Server started")
