@@ -36,49 +36,22 @@ button {
     border: none;
     padding: 13px 40px;
     border-radius: 8px;
-    font-family: "Roboto", sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-right: 20px;
 }
 
-/*CSS for input form on page 4*/
-
-form label {
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif
-}
-
-form input {
-    height: 10px;
-    width: 300px;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: none;
-}
-form select {
-    padding: 8px;
-    margin-top: 2px;
-    border: none;
-    width: 315px;
-}
-
-form {
-    margin-top: 20px;
+.headingsection {
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
 }
 
-textarea {
-    padding: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 290px;
-    height: 40px;
-    border-radius: 8px;
-    border: none;
-    font-family: Arial, Helvetica, sans-serif
-}
+
+
 
 /*CSS affecting 1index*/
 
@@ -89,15 +62,6 @@ textarea {
     justify-content: center ;
 }
 
-.headingsection {
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    font-family: "Arial, Helvetica, sans-serif";
-    font-weight: bold;
-}
 
 #headingsection1 {
     font-size: 25px;
@@ -168,17 +132,75 @@ textarea {
     align-content: center;
 }
 
+form label {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form input {
+    height: 10px;
+    width: 300px;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+}
+form select {
+    padding: 8px;
+    margin-top: 2px;
+    border: none;
+    width: 315px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+textarea {
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 290px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    resize: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 
 
 
 /*CSS affecting 5WelcomeSignUpPage*/
 
 #headingsection5 {
+    font-weight: 100;
+}
+
+#headingsection5 h1{
+    font-weight: 100;
+}
+
+#newNameEntry {
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+#newIdEntry {
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+#newDateEntry {
     font-size: 15px;
     text-align: center;
-    padding: 50px;
-    line-height: 40px;
-    text-shadow: 0px 2px 11px #908a6d;
+    padding: 10px;
 }
 
 
@@ -188,8 +210,9 @@ textarea {
 #headingsection6 {
     font-size: 30px;
     text-align: center;
-    padding: 80px;
+    padding: 50px;
     line-height: 70px;
+    font-weight: normal;
 }
 
 

@@ -19,13 +19,16 @@
 
 
                 <label for="input-name">Name:</label>
-                <input type="text" id="input-name" name="name" placeholder="Input Name" required><br>
+                <input type="text" maxlength="40" id="input-name" 
+                        name="name" placeholder="Input Name" required><br>
 
                 <label for="input-phonenumber">Phone Number:</label>
-                <input type="text" id="input-phonenumber" name="phonenumber" placeholder="Input Phone Number" required><br>
+                <input type="tel" maxlength="14" 
+                        id="input-phonenumber" name="phonenumber" placeholder="Input Phone Number" required><br>
 
                 <label for="input-email">Email:</label>
-                <input type="text" id="input-email" name="email"  placeholder="Input Email Address" required><br>
+                <input type="email" maxlength="40" id="input-email" 
+                        name="email"  placeholder="Input Email Address" required><br>
 
                 <label for="mechanic-experience">Mechanical Experience:</label>
                 <select name="mechanic-experience" id="mechanic-experience" required>
@@ -36,7 +39,7 @@
                 </select><br>
 
                 <label for="comments">Additional Comments:</label>
-                <textarea id="comments" name="comments" placeholder="Share any additional comments you may have"></textarea><br>
+                <textarea id="comments" name="comments" maxlength="100" placeholder="Share any additional comments you may have"></textarea><br>
 
                 <button type="submit">Submit</button>
 
@@ -51,6 +54,7 @@
 
     </div>
     <script src="script-signup.js"></script>
+    <script src="phonenumber-format.js"></script>
 </body>
 
 </html>

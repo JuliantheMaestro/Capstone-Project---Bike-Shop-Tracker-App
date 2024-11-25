@@ -1,10 +1,14 @@
+//Generates random 4 digit ID for the user
+
 function generateRandomID() {
     return Math.floor(1000 + Math.random() * 9000)
 }
 
 
+//Form submission 
+
 document.getElementById('userForm').addEventListener('submit', async function(event) {
-    
+    event.preventDefault()
     
     const randomID = generateRandomID()
     
