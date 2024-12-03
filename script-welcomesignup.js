@@ -2,7 +2,7 @@
 
 async function fetchLatestEntry() {
     try {
-        const response = await fetch('/latest-entry')
+        const response = await fetch("/latest-entry")
         const latestEntry = await response.json()
 
 
@@ -12,10 +12,10 @@ async function fetchLatestEntry() {
 
         let hours = timestamp.getHours()
         let minutes = timestamp.getMinutes()
-        const amorpm = hours >= 12 ? 'pm' : 'am'
+        const amorpm = hours >= 12 ? "pm" : "am"
         hours = hours % 12
         hours = hours ? hours: 12
-        minutes = minutes < 10 ? '0' + minutes : minutes 
+        minutes = minutes < 10 ? "0" + minutes : minutes 
         const timeString = `${hours}:${minutes}${amorpm}`
 
         const dateString = `${timestamp.getMonth() + 1}/${timestamp.getDate()}/${timestamp.getFullYear()}`

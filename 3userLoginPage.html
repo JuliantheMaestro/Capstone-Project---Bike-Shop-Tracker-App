@@ -15,20 +15,22 @@
     <div class="index-el">
         
 
-
         <div class="form3">
-            <input type="text" placeholder="Open Shop/Volunteer ID">
-            <input type="text" placeholder="Open Shop/Volunteer Name">
+
+            <form id="login-form" action="/login" method="post">
+
+                <input type="text" placeholder="Volunteer ID" id="login-numid" maxlength="4">
+                <input type="text" placeholder="Volunteer Name" id="login-name" maxlength="40">
+                <button type="submit">Go!</button>
+
+            </form>
+
         </div>
 
-        <div class="button-container">
-            
-            <button onclick = "window.location.href = '7WelcomeBackUserPage.html'">Go!</button>
-
-        </div>
         
     </div>
     <script src="script.js"></script>
+    <script src="script-login.js"></script>
 </body>
 
 </html>

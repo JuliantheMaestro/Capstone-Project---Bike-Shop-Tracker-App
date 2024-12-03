@@ -5,39 +5,40 @@ function generateRandomID() {
 }
 
 
-//Form submission 
+//New user sign-up form submission 
 
-document.getElementById('userForm').addEventListener('submit', async function(event) {
+document.getElementById("userForm").addEventListener("submit", async function(event) {
     event.preventDefault()
     
     const randomID = generateRandomID()
     
     const formData = {
         numid: randomID,
-        name: document.getElementById('input-name').value,
-        email: document.getElementById('input-email').value,
-        phonenumber: document.getElementById('input-phonenumber').value,
-        mechanic_experience: document.getElementById('mechanic-experience').value,
-        comments: document.getElementById('comments').value
+        name: document.getElementById("input-name").value,
+        email: document.getElementById("input-email").value,
+        phonenumber: document.getElementById("input-phonenumber").value,
+        mechanic_experience: document.getElementById("mechanic-experience").value,
+        comments: document.getElementById("comments").value
     }
     
     try{
-        const response = await fetch('/post', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+        const response = await fetch("/post", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
         })
 
+    const result = await response.json()
+
         if (response.ok) {
-            alert('Form Submitted Successfully')
+            alert(result.message)
+            window.location.href = "/5WelcomeSignupPage.html"
         } else {
-            const error = await response.text()
-            console.error('Error response:', error)
-            alert('Unable to submit form.')
+            alert(result.message)
         }
-        } catch (err) {
-        console.error('Error:', err);
-        alert('An error occurred. Please try again.')
+        } catch (error) {
+        console.error("Error:", err)
+        alert("An error occurred. Please try again.")
     }
     
 })

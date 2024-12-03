@@ -14,10 +14,13 @@ app.use(express.json())
 
 //Connection to MongoDB
 
-mongoose.connect("mongodb://127.0.0.1:27017/volunteers")
-const db = mongoose.connection 
-db.once("open",()=>{
+const connect = mongoose.connect("mongodb://127.0.0.1:27017/volunteers")
+
+connect.then(() => {
     console.log("Mongodb connection successful")
+})
+.catch(() => {
+    console.log("Database cannot be connected")
 })
 
 
@@ -53,22 +56,63 @@ app.get("/",(req,res)=>{
 
 
 
-//Data collection from volunteer sign-up form, sends an alert if it succeeds and refreshes the form 
+//Data collection from volunteer sign-up form, sends an alert if it succeeds 
 
 app.post("/post",async (req,res)=>{
     const {numid, name, phonenumber, email, mechanic_experience, comments} = req.body
-    const user = new Users ({
-        numid,
-        name,
-        phonenumber,
-        email,
-        mechanic_experience,
-        comments
-    })
-    await user.save()
-    console.log(user)
-    res.send('<script>alert("Form Submitted Successfully"); window.location.href="/";</script>')
+
+ // Check if the user already exists
+
+     try {
+            const existingUser = await Users.findOne({ name })
+
+            if (existingUser) {
+                return res.status(400).json({ message: "Name already exists, please choose a different name"})
+            }
+
+            const user = new Users ({
+                numid,
+                name,
+                phonenumber,
+                email,
+                mechanic_experience,
+                comments
+            })
+
+
+            const userData = await user.save()
+            console.log(userData)
+            res.status(200).json({ message: "Form Submitted Successfully" })
+        } catch (error) {
+            console.error("Failed to create user", error)
+            res.status(500).json({ message: "Failed to create user. Please try again." })
+        }
 })
+
+
+
+
+
+//User login
+
+app.post ("/login", async (req, res) => {
+    try {
+        const { name, numid} = req.body
+
+        const user = await Users.findOne({ $or: [{ name }, { numid }] })
+        
+        if (!user) {
+           return res.status(404).json({ message: "User Name or ID cannot be found" })
+        }
+        res.status(200).json({ message: "Login Successful!", user})
+    
+    } catch (error) {
+    console.error("Login error:", error)
+    res.status(500).json({ message: "An error occurred during login." })
+    }
+})
+
+
 
 
 
