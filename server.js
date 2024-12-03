@@ -55,11 +55,30 @@ app.get("/",(req,res)=>{
 
 
 
+//Checks if ID is unique and generates random 4 digit ID for the user
+
+async function makeUniqueID() {
+    let unique = false
+    let numid
+
+    while (!unique) {
+            numid = Math.floor(1000 + Math.random() * 9000)
+            const existingNumdID = await Users.findOne({ numid })
+
+            if (!existingNumdID) {
+                unique = true
+            }
+    }
+
+    return numid 
+}
+
+
 
 //Data collection from volunteer sign-up form, sends an alert if it succeeds 
 
 app.post("/post",async (req,res)=>{
-    const {numid, name, phonenumber, email, mechanic_experience, comments} = req.body
+    const { name, phonenumber, email, mechanic_experience, comments } = req.body
 
  // Check if the user already exists
 
@@ -70,6 +89,16 @@ app.post("/post",async (req,res)=>{
                 return res.status(400).json({ message: "Name already exists, please choose a different name"})
             }
 
+
+//Generates nonexisting numid
+
+const numid = await makeUniqueID()
+
+
+
+
+
+//Creates and saves the user
             const user = new Users ({
                 numid,
                 name,
