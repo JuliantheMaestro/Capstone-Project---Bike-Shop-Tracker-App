@@ -121,7 +121,8 @@ button {
 }
 
 .form3 button {
-    margin-top: 20px;
+    margin-top: 40px;
+    width: 340px;
 }
 
 
@@ -183,6 +184,8 @@ textarea {
 
 #headingsection5 {
     font-weight: 100;
+    margin-top: 100px;
+    margin-bottom: 80px;
 }
 
 #headingsection5 h1{
@@ -225,3 +228,20 @@ textarea {
 
 /*CSS affecting 7WelcomeBackUserPage*/
 
+#headingsection7 {
+    margin-top: 170px;
+    margin-bottom: 130px;
+}
+
+
+#user-name {
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+#user-id {
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}

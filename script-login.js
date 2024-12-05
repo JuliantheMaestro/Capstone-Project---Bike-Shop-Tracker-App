@@ -18,6 +18,9 @@ document.getElementById('login-form').addEventListener('submit', async function(
         const result = await response.json()
 
         if (response.ok) {
+
+            localStorage.setItem("user", JSON.stringify(result.user))
+
             alert(result.message)
             window.location.href = "/7WelcomeBackUserPage.html"
         } else {
