@@ -60,6 +60,7 @@ button {
     margin-top: 20px;
     display: flex;
     justify-content: center ;
+    flex-wrap: wrap;
 }
 
 
@@ -272,13 +273,14 @@ textarea {
 }
 
 #adminData-table th {
+    background-color: #fcbf49;
     padding: 10px;
     text-align: center;
 }
 
 #adminData-table tbody {
 color: black;
-background-color: #6a665270;
+background-color: #dcd08f;
 text-align: center;
 }
 
@@ -295,6 +297,7 @@ text-align: center;
 
 .pageupdown-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
