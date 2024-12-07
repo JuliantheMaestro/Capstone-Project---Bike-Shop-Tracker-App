@@ -261,7 +261,11 @@ async function setCredentialsFromAuthCode(authorizationCode) {
 
         if (!oAuth2Client.credentials.access_token) {
             const authUrl = getAuthUrl()
-            return res.status(401).json({ message: "Authorization required", authUrl })
+            
+            return res.send(`
+                <h1>Authorization Required</h1>
+                <p>Please <a href="${authUrl}" target="_blank">click here</a> to authorize the application.</p>
+            `)
         }
 
         const calendar = google.calendar({ version: "v3", auth: oAuth2Client })
@@ -280,13 +284,13 @@ async function setCredentialsFromAuthCode(authorizationCode) {
                             dateTime: new Date(new Date(loginDate).getTime() + 15 * 60 * 1000).toISOString(),
                             timeZone: "America/New_York",
                         },
-                    };
+                    }
 
                     try {
                         await calendar.events.insert({
                             calendarId: "primary",
                             resource: event,
-                        });
+                        })
                     } catch (error) {
                         console.error(`Error adding event for ${user.name}:`, error)
                     }
