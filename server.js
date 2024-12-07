@@ -71,7 +71,7 @@ const Users = mongoose.model("data", userSchema)
 //Directs user to first page when server starts
 
 app.get("/", (req,res) => {
-    res.sendFile(path.join(__dirname, "BikeShopAdmin.html"))
+    res.sendFile(path.join(__dirname, "1index.html"))
 })
 
 
@@ -159,6 +159,15 @@ app.post ("/login", async (req, res) => {
     try {
         const { name, numid} = req.body
 
+        //Admin Login
+        if (name === "Data" && numid === "1234") {
+            return res.status(200).json({
+                message: "Admin Login Successful",
+                redirect: "/BikeShopAdmin.html", 
+            })
+        }
+
+        //Regular User Login
         const user = await Users.findOne({ $or: [{ name }, { numid }] })
         
         if (!user) {
@@ -170,13 +179,17 @@ app.post ("/login", async (req, res) => {
         user.loginDates = [...user.loginDates || [], new Date()]
         await user.save()
 
-        res.status(200).json({ message: "Login Successful!", user})
-      } catch (error) {
+
+   return res.status(200).json({
+            message: "Login Successful!",
+            redirect: "/7WelcomeBackUserPage.html", 
+            user: { name: user.name, numid: user.numid }, 
+        })
+    } catch (error) {
         console.error("Login error:", error)
         res.status(500).json({ message: "An error occurred during login." })
     }
 })
-
 
 
 

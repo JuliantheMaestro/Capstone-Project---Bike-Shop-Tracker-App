@@ -18,18 +18,22 @@ document.getElementById('login-form').addEventListener('submit', async function(
         const result = await response.json()
 
         if (response.ok) {
-
-            localStorage.setItem("user", JSON.stringify(result.user))
+            // Store user data in localStorage for regular users
+            if (result.user) {
+                localStorage.setItem("user", JSON.stringify(result.user))
+            }
 
             alert(result.message)
-            window.location.href = "/7WelcomeBackUserPage.html"
+
+            // Redirect to the appropriate page
+            if (result.redirect) {
+                window.location.href = result.redirect
+            }
         } else {
             alert(result.message)
         }
-        } catch (error) {
+    } catch (error) {
         console.error("Error:", error)
         alert("An error occurred. Please try again.")
     }
-    
 })
-
