@@ -229,8 +229,8 @@ textarea {
 /*CSS affecting 7WelcomeBackUserPage*/
 
 #headingsection7 {
-    margin-top: 170px;
-    margin-bottom: 130px;
+    margin-top: 140px;
+    margin-bottom: 80px;
 }
 
 
@@ -245,3 +245,56 @@ textarea {
     text-align: center;
     padding: 30px;
 }
+
+#headingsection7 h1 {
+    font-weight: 200;
+} 
+
+
+/*Admin Table CSS*/
+
+.adminTable-container {
+    margin-top: 5px;
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+#adminData-table {
+    border: black solid 2px;
+    border-collapse: collapse;
+}
+
+#adminData-table th {
+    padding: 10px;
+    text-align: center;
+}
+
+#adminData-table tbody {
+color: black;
+background-color: #6a665270;
+text-align: center;
+}
+
+#adminData-table td {
+    padding: 9px;
+    border: black solid 2px;
+   
+}
+
+.adminButton-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pageupdown-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
