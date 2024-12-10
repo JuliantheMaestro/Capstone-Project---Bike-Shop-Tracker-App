@@ -1,0 +1,128 @@
+[{
+  "_id": {
+    "$oid": "674427a45e1a87bebcce21ae"
+  },
+  "numid": 9521,
+  "name": "Tony",
+  "phonenumber": "(453) 453-4534",
+  "email": "Tony@gmail.com",
+  "mechanic_experience": "intermediate",
+  "comments": "I have worked on some bikes",
+  "timestamp": {
+    "$date": "2024-11-25T07:30:44.746Z"
+  },
+  "__v": 6,
+  "timesLoggedIn": 6,
+  "loginDates": [
+    {
+      "$date": "2024-12-06T06:58:37.758Z"
+    },
+    {
+      "$date": "2024-12-07T21:41:00.494Z"
+    },
+    {
+      "$date": "2024-12-07T23:00:22.254Z"
+    },
+    {
+      "$date": "2024-12-08T02:54:10.679Z"
+    },
+    {
+      "$date": "2024-12-08T03:05:42.508Z"
+    },
+    {
+      "$date": "2024-12-08T04:15:57.189Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "674eac667aeb9a2da68ee54c"
+  },
+  "numid": 7992,
+  "name": "Robert Schumann",
+  "phonenumber": "(502) 456-7567",
+  "email": "Robertthemusician@gmail.com",
+  "mechanic_experience": "none",
+  "comments": "I've never worked on any bikes",
+  "timestamp": {
+    "$date": "2024-12-03T06:59:50.282Z"
+  },
+  "__v": 5,
+  "loginDates": [
+    {
+      "$date": "2024-12-07T21:56:56.525Z"
+    },
+    {
+      "$date": "2024-12-07T22:20:39.755Z"
+    },
+    {
+      "$date": "2024-12-08T02:31:52.529Z"
+    },
+    {
+      "$date": "2024-12-08T03:12:17.270Z"
+    },
+    {
+      "$date": "2024-12-08T03:24:10.175Z"
+    }
+  ],
+  "timesLoggedIn": 5
+},
+{
+  "_id": {
+    "$oid": "675511a60cfde5762c082514"
+  },
+  "numid": 2158,
+  "name": "Rob",
+  "phonenumber": "(502) 345-435",
+  "email": "Robtheguy@gmail.com",
+  "mechanic_experience": "none",
+  "comments": "Never worked on a bike in my life",
+  "timesLoggedIn": 1,
+  "loginDates": [
+    {
+      "$date": "2024-12-08T03:59:00.490Z"
+    }
+  ],
+  "timestamp": {
+    "$date": "2024-12-08T03:25:26.747Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6757d0dd076e322160187f56"
+  },
+  "numid": 8394,
+  "name": "Skittles",
+  "phonenumber": "(502) 742-8197",
+  "email": "Skittlesarethebest@gmail.com",
+  "mechanic_experience": "advanced",
+  "comments": "I have extensive knowledge of working on exotic bikes. I ran my own bike shop for 15 years. So happy to join!",
+  "timesLoggedIn": 1,
+  "loginDates": [
+    {
+      "$date": "2024-12-10T05:26:08.377Z"
+    }
+  ],
+  "timestamp": {
+    "$date": "2024-12-10T05:25:49.049Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6757d16e076e322160187f5e"
+  },
+  "numid": 9740,
+  "name": "Mozart",
+  "phonenumber": "(502) 543-2389",
+  "email": "Papageno@gmail.com",
+  "mechanic_experience": "advanced",
+  "comments": "I'm as advanced working on bikes as I am composing. And if you know anything about me you would know that's advanced.",
+  "timesLoggedIn": 0,
+  "loginDates": [],
+  "timestamp": {
+    "$date": "2024-12-10T05:28:14.701Z"
+  },
+  "__v": 0
+}]
