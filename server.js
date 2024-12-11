@@ -12,7 +12,6 @@ const { OAuth2 } = google.auth
 
 const port = 3019
 const app = express()
-
 app.use(express.static(__dirname))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
@@ -35,7 +34,7 @@ const oAuth2Client = new OAuth2(
 
 //Connection to MongoDB
 
-const connect = mongoose.connect("mongodb://127.0.0.1:27017/volunteers")
+const connect = mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/volunteers")
 
 connect.then(() => {
     console.log("Mongodb connection successful")
