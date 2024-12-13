@@ -38,3 +38,6 @@ How To Run
 Additional Note
 
 - When trying to sync user login information to google calendar upon clicking the sync button you may need to click the link in the VScode terminal to authenticate in order for the Google login pop up to show. Once you are properly logged into your google account it will sync to Google Calendar
+
+AI Usage
+-Chatgpt helped to guide me in the right direction for a lot of this project. First I thought setting up the server was difficult but then connecting everthing to mongodb and dealing with the Google API, chatgpt really made a huge difference. It helped to point me in the right direction to find the right resources and if I'm being completely honest without it I don't think I would have been able to solve all of the issues I ran into without it. Dealing with the Google API and Mongodb were incredibly challenging
