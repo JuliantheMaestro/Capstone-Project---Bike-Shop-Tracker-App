@@ -17,9 +17,6 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 
-console.log("Environment Variables Loaded: ", process.env.CLIENT_ID, process.env.CLIENT_SECRET, process.env.REDIRECT_URI)
-
-
 const oAuth2Client = new OAuth2(
     process.env.CLIENT_ID,
     process.env.CLIENT_SECRET,
@@ -34,7 +31,7 @@ const oAuth2Client = new OAuth2(
 
 //Connection to MongoDB
 
-const connect = mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/volunteers")
+const connect = mongoose.connect(process.env.MONGO_URI) // || "mongodb://127.0.0.1:27017/volunteers")
 
 connect.then(() => {
     console.log("Mongodb connection successful")
