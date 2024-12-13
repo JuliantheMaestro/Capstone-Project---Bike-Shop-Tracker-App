@@ -27,7 +27,8 @@ Optional Features List
 How To Run
 
 - Make sure you have access to Git Bash in VSCode 
-- Install MongoDB 
+- The user will need to create a new file in VScode, name the file:  .env
+- The user will need to look in my notes for the project submission to get the keys and MONGO_URI
 - Install node.js
 - Run this command to install all of the dependencies:  npm install
 - Run this command to start the server:  Node server.js
