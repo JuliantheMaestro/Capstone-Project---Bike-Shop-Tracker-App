@@ -28,8 +28,9 @@ How To Run
 
 - Make sure you have access to Git Bash in VSCode 
 - The user will need to create a new file in VScode, name the file:  .env
-- The user will need to look in my notes for the project submission to get the keys and MONGO_URI. Copy all of that in the notes and paste it into the new .env file
+- The user will need to look in my notes for the project submission to get the client ID, secret, redirect uri and mongo uri. Copy all of that in the notes and paste it into the new .env file
 - Install node.js
+- Make sure in the terminal you are in the correct folder. You may need to Cd Capstone Project - Bike Shop Tracker App
 - Run this command to install all of the dependencies:  npm install
 - Run this command to start the server:  Node server.js
 - Open a new browser and type this into the url: localhost:3019
